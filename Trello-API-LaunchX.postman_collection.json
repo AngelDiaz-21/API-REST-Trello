@@ -11,7 +11,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/boards/?name=ApiKeyBoard2&key=9ba3968221ada28ff515502243216c18&token=d0b84d41b7485339a3a0ab2501d03dd792640e2e7a82bfcb8aa5ffe323358bc8",
+					"raw": "",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -30,11 +30,11 @@
 						},
 						{
 							"key": "key",
-							"value": "9ba3968221ada28ff515502243216c18"
+							"value": ""
 						},
 						{
 							"key": "token",
-							"value": "d0b84d41b7485339a3a0ab2501d03dd792640e2e7a82bfcb8aa5ffe323358bc8"
+							"value": ""
 						}
 					]
 				}
@@ -47,7 +47,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/boards/62625f5f78af597b71f391de?key=9ba3968221ada28ff515502243216c18&token=d0b84d41b7485339a3a0ab2501d03dd792640e2e7a82bfcb8aa5ffe323358bc8",
+					"raw": "",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -62,11 +62,11 @@
 					"query": [
 						{
 							"key": "key",
-							"value": "9ba3968221ada28ff515502243216c18"
+							"value": ""
 						},
 						{
 							"key": "token",
-							"value": "d0b84d41b7485339a3a0ab2501d03dd792640e2e7a82bfcb8aa5ffe323358bc8"
+							"value": ""
 						}
 					]
 				}
@@ -79,7 +79,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/boards/62625f5f78af597b71f391de/lists?key=9ba3968221ada28ff515502243216c18&token=d0b84d41b7485339a3a0ab2501d03dd792640e2e7a82bfcb8aa5ffe323358bc8",
+					"raw": "",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -95,11 +95,11 @@
 					"query": [
 						{
 							"key": "key",
-							"value": "9ba3968221ada28ff515502243216c18"
+							"value": ""
 						},
 						{
 							"key": "token",
-							"value": "d0b84d41b7485339a3a0ab2501d03dd792640e2e7a82bfcb8aa5ffe323358bc8"
+							"value": ""
 						}
 					]
 				}
@@ -112,7 +112,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/cards?idList=62625f5f78af597b71f391df&key=9ba3968221ada28ff515502243216c18&token=d0b84d41b7485339a3a0ab2501d03dd792640e2e7a82bfcb8aa5ffe323358bc8&name=Agregando una nueva card otra y otro",
+					"raw": "",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -126,15 +126,15 @@
 					"query": [
 						{
 							"key": "idList",
-							"value": "62625f5f78af597b71f391df"
+							"value": ""
 						},
 						{
 							"key": "key",
-							"value": "9ba3968221ada28ff515502243216c18"
+							"value": ""
 						},
 						{
 							"key": "token",
-							"value": "d0b84d41b7485339a3a0ab2501d03dd792640e2e7a82bfcb8aa5ffe323358bc8"
+							"value": ""
 						},
 						{
 							"key": "name",
@@ -142,6 +142,55 @@
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a card title",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/{id}?key=APIKey&token=APIToken",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": ""
+						},
+						{
+							"key": "token",
+							"value": ""
+						},
+						{
+							"key": "name",
+							"value": "Nombre actualizado"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a card",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
