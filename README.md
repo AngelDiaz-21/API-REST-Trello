@@ -29,7 +29,7 @@ Por último, en el response se muestra el ID del tablero que se creó, se debe d
 
 ### Obtener la información del board a partir de su ID
 
-Para obtener la información del board a partir del ID se debe utilizar la petición `Get Board By ID`, y se deben de llenar los valores que se piden que sería la API KEY y el Token. Antes de envía el request se debe modificar el URL, justo después de `/1/boards`, se debe de quitar el valor que esta ahí y se debe de poner el ID del board creado anteriormente.
+Para obtener la información del board a partir del ID se debe utilizar la petición `Get Board By ID`, y se deben de llenar los valores que se piden que sería la API KEY y el Token. Antes de envíar el request se debe modificar el URL, justo después de `/1/boards`, se debe de quitar el valor que esta ahí y se debe de poner el ID del board creado anteriormente.
 
 ```
 https://api.trello.com/1/boards/BOARDID/lists?key=APIKEY&token=TOKEN
@@ -37,19 +37,23 @@ https://api.trello.com/1/boards/BOARDID/lists?key=APIKEY&token=TOKEN
 
 Una vez realizado lo anterior se envía el request y en el response se muestra la información del board, como se muestra a continuación:
 
+`Respuesta en el response`
+
 ![Información del board a partir de su ID](./images/get-Board-by-ID-response.png "Información del board a partir de su ID")
 
 ### Obtener la lista de columnas del board creado
 
 Para este paso se debe de utilizar la petición llamada `Get Lists of Cards by Board ID` y nuevamente se debe agregar el API KEY Y el Token.
 
-Antes de envía el request se debe modificar el URL, justo después de `/1/boards`, se debe de quitar el valor que esta ahí y se debe de poner el ID del board creado anteriormente.
+Antes de envíar el request se debe modificar el URL, justo después de `/1/boards`, se debe de quitar el valor que esta ahí y se debe de poner el ID del board creado anteriormente.
 
 ```
 https://api.trello.com/1/boards/BOARDID/lists?key=APIKEY&token=TOKEN
 ```
 
 Una vez hecho lo anterior se envía el request y en el response se debe de verificar la información que se recibe. Se debe de obtener como respuesta la lista de columnas que se tiene en el tablero, como se muestra a continuación:
+
+`Respuesta en el response`
 
 ![Lista de columnas](./images/get-lists-of-cards-byBoard-ID.png "Lista de columnas")
 
@@ -67,4 +71,42 @@ Una vez rellenado los campos solicitados se envía el request y se debe verifica
 
 Y así mismo también se debe verificar que se haya creado en la app de Trello, como se muestra a continuación:
 
+`Card agregado`
+
 ![Card agregado en el tablero](./images/cardAgregado.png "Card agregado en el tablero")
+
+### Actualizar el título de una card
+
+Para actualizar el título de una card se debe hacer uso del request PUT `Update a card title`. 
+
+También se deben de llenar los valores que se piden, en este caso serían la API KEY, el Token y el nuevo nombre (name). Así mismo se debe modificar la URL, justo después de `/1/cards/`, en donde dice `CARDID` se debe colocar el ID del card que fue creado en el paso anterior.
+
+```
+https://api.trello.com/1/cards/CARDID?key=APIKEY&token=TOKEN
+```
+
+Una vez modificado el URL se envía la petición y debemos de verificar que tenemos que la respuesta sea exitosa.
+
+`Respuesta en el response`
+
+![Update a card title - Respuesta en el response](./images/update-card-title-response.png "Update a card title - Respuesta en el response")
+
+`Título actualizado en la app de Trello`
+
+![Título actualizado en la app de Trello](./images/update-card-title-appTrello.png "Título actualizado en la app de Trello")
+
+### Eliminar una card
+
+Para eliminar una card se debe utilizar el request `Delete a card` y rellenar los parámetros necesarios, lo que es el API KEY y el token. Así mismo en la URL se debe colocar el ID, como en el paso anterior en donde se actualizó el nombre la card.
+
+```
+https://api.trello.com/1/cards/CARDID?key=APIKEY&token=TOKEN
+```
+
+Una vez hecho lo anterior se envía la petición y se puede verificar en el response que obtiene el status de 200, esto quiere decir que esta bien, que el card se ha eliminado.
+
+`Respuesta del response`
+
+![Delete a card - Respuesta en el response](./images/delete-Card-response.png "Delete a card - Respuesta en el response")
+
+Y por último, se puede verificar en la app de Trello que la card se ha eliminado.
